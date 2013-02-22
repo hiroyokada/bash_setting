@@ -39,3 +39,9 @@ function svnlogByDateRange() {
     echo $CMD
     eval $CMD
 }
+
+function svnlogByDateRangeMine() {
+    CMD='svnlogByDateRange $@ | sed -n "/okada/,/----$/ p"'
+    echo $CMD
+    eval $CMD
+}
